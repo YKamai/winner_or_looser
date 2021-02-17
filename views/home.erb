@@ -1,0 +1,13 @@
+<div id="home">
+  <% if @result %>
+    So today you are a <b><%= @result.upcase %></b>
+    <div class="space"></div>
+    Come back tomorrow to test your luck again!
+  <% else %>
+    Let's find out who you are today. Just click button below
+    <div class="space"></div>
+    <form action="/test" method="post">
+      <input type="submit" value="Test Me">
+    </form>
+  <% end %>
+</div>
